@@ -1,0 +1,17 @@
+<div class="container text-center">
+    <h1>Routing con parametros</h1>
+    <button class="btn btn-success" (click)="goToHome()">Ir a Home</button>
+    <button class="btn btn-primary" (click)="redirect()">Collatz </button>
+    <div class="container d-flex justify-content-center">
+        <ul class="list-group col-3 mb-4 mt-4">
+            <li *ngFor="let num of resultado" class="list-group-item text-center">
+                {{num}}
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="!numero">
+        <h1 style="color: red;">
+            Numero Collatz
+        </h1>
+    </div>
+</div>
