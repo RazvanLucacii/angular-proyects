@@ -8,11 +8,11 @@ import { Producto } from 'src/app/models/Producto';
 })
 export class ListaproductosComponent {
   public productos: Array<Producto>;
-  constructor(){
+  constructor() {
     this.productos = [
       new Producto(
         "Nike Air Jordan",
-        "https://i.ebayimg.com/images/g/lEsAAOSwBJpc1MAN/s-l300.jpg",
+        "https://de.basketzone.net/zdjecia/2021/04/26/604/37/NIKE_AIR_JORDAN_6_RETRO_CARMINE-mini.jpg",
         150
       ),
       new Producto(
@@ -32,5 +32,4 @@ export class ListaproductosComponent {
       )
     ]
   }
-  
 }

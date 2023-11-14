@@ -1,18 +1,10 @@
 <div>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    <a [routerLink]="['/productos']">Volver a productos</a>
+    <div *ngIf="producto">
+        <h1>Detalle producto</h1>
+        <h2 style="color:blueviolet">
+            {{producto.nombre}}, Precio: {{producto.precio}}
+        </h2>
+        <img src="{{producto.imagen}}" style="width: 150px; height: 150px;"/>
+    </div>    
 </div>

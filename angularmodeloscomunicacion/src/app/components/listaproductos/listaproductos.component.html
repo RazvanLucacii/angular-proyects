@@ -5,7 +5,9 @@
             {{producto.nombre}}, Precio: {{producto.precio}}
         </h2>
         <img src="{{producto.imagen}}"
-        style="width: 250px; height: 250px;"/>
-        <button (click)="redirect()">Detalles</button>
+            style="width: 250px; height: 250px;"/>
+        <a [routerLink]="['/detalleproducto', producto.nombre, producto.imagen, producto.precio]">
+            Detalle
+        </a>
     </div>
 </div>

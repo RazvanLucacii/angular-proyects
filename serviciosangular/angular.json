@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularmodeloscomunicacion": {
+    "serviciosangular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularmodeloscomunicacion",
+            "outputPath": "dist/serviciosangular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularmodeloscomunicacion:build:production"
+              "browserTarget": "serviciosangular:build:production"
             },
             "development": {
-              "browserTarget": "angularmodeloscomunicacion:build:development"
+              "browserTarget": "serviciosangular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularmodeloscomunicacion:build"
+            "browserTarget": "serviciosangular:build"
           }
         },
         "test": {
@@ -94,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "43906fec-f0c6-4563-bb48-b763013758c9"
   }
 }
