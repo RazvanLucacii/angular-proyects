@@ -1,43 +1,42 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Comic } from 'src/app/models/Comic';
-import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
-  selector: 'app-padrecomic',
-  templateUrl: './padrecomic.component.html',
-  styleUrls: ['./padrecomic.component.css']
+  selector: 'app-libreria',
+  templateUrl: './libreria.component.html',
+  styleUrls: ['./libreria.component.css']
 })
-export class PadrecomicComponent {
+export class LibreriaComponent {
   @ViewChild("cajanombre") cajaNombreRef!: ElementRef;
-  @ViewChild("cajaimagen") cajaImagenRef!: ElementRef;
   @ViewChild("cajadescripcion") cajaDescripcionRef!: ElementRef;
+  @ViewChild("cajaimagen") cajaImagenRef!: ElementRef;
   public comics: Array<Comic>;
   public comicFavorito!: Comic;
 
-  //tendremos un metodo para recibir datos desde el hijo
-  seleccionarFavoritoPadre( comic: Comic): void{
-    this.comicFavorito = comic;
+  modificarComic(event: number): void {
+    var nombre = this.cajaNombreRef.nativeElement.value;
+    var descripcion = this.cajaDescripcionRef.nativeElement.value;
+    var imagen = this.cajaImagenRef.nativeElement.value;
+    this.comics[event] = new Comic(nombre, imagen, descripcion);
   }
 
-  crearPadre(): void{
-    var nombre = this.cajaNombreRef.nativeElement.value;
-    var imagen = this.cajaImagenRef.nativeElement.value;
+  insertarComic(): void {
+    var titulo = this.cajaNombreRef.nativeElement.value;
     var descripcion = this.cajaDescripcionRef.nativeElement.value;
-    var newComic = new Comic (nombre, imagen, descripcion);
+    var imagen = this.cajaImagenRef.nativeElement.value;
+    var newComic = new Comic(titulo,imagen, descripcion);
     this.comics.push(newComic);
   }
-  eliminarPadre( comic: Comic): void{
-    this.comics.splice(this.comics.indexOf(comic), 1);
+
+  seleccionarFavorito( event: Comic ): void {
+    this.comicFavorito = event;
   }
 
-  modificarPadre(comic: number): void{
-    var nombre = this.cajaNombreRef.nativeElement.value;
-    var imagen = this.cajaImagenRef.nativeElement.value;
-    var descripcion = this.cajaDescripcionRef.nativeElement.value;
-    this.comics[comic] = new Comic(nombre, imagen, descripcion);
+  eliminarComic( event: number ): void {
+    this.comics.splice(event, 1);
   }
 
-  constructor(private _activeRoute: ActivatedRoute) {
+  constructor() {
     this.comics = [
       new Comic(
         "Spiderman",
@@ -51,7 +50,7 @@ export class PadrecomicComponent {
       ),
       new Comic(
         "Guardianes de la Galaxia",
-        "https://cdn.normacomics.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/g/u/guardianes_galaxia_guadianes_infinito.jpg",
+        "https://www.eslahoradelastortas.com/blog/media/2016/08/guardianes-de-la-galaxia.jpg",
         "Yo soy Groot"
       ),
       new Comic(
@@ -64,6 +63,6 @@ export class PadrecomicComponent {
       "https://i.pinimg.com/originals/e1/d8/ff/e1d8ff4aeab5e567798635008fe98ee1.png",
       "Todd MacFarlane"
       )
-    ]
+    ]; 
   }
 }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HijocomicComponent } from './hijocomic.component';
+import { LibreriaComponent } from './libreria.component';
 
-describe('HijocomicComponent', () => {
-  let component: HijocomicComponent;
-  let fixture: ComponentFixture<HijocomicComponent>;
+describe('LibreriaComponent', () => {
+  let component: LibreriaComponent;
+  let fixture: ComponentFixture<LibreriaComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HijocomicComponent]
+      declarations: [LibreriaComponent]
     });
-    fixture = TestBed.createComponent(HijocomicComponent);
+    fixture = TestBed.createComponent(LibreriaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

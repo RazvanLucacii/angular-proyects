@@ -13,6 +13,7 @@ export class HijococheComponent {
     //CUANDO RECIBIMOS ELEMENTOS INPUT, NO PODEMOS 
     //UTILIZARLOS DENTRO DEL CONSTRUCTOR
   }
+
   //TENDREMOS UN METODO QUE DEVOVERA TRUE O FALSE
   //SI EL COCHE ESTA APAGADO O ENCENDIDO
   comprobarEstado(): boolean {
@@ -25,11 +26,13 @@ export class HijococheComponent {
       return true;
     }
   }
+
   //TENDREMOS UN METODO PARA ENCENDER EL COCHE
   encenderCoche(): void{
     this.car.estado = !this.car.estado;
     this.comprobarEstado();
   }
+
   //TENDREMOS UN METODO PARA ACELERAR EL COCHE
   acelerarCoche(): void {
     if (this.comprobarEstado() == false){

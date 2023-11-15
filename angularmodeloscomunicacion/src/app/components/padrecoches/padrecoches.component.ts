@@ -8,6 +8,7 @@ import { Coche } from 'src/app/models/Coche';
 })
 export class PadrecochesComponent {
   public coches: Array<Coche>;
+
   constructor() {
     this.coches = [
       new Coche("Ford", "Mustang", 0, 25, false),
