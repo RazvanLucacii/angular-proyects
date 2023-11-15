@@ -6,13 +6,13 @@
         {{comic.descripcion}}
     </h2>
     <img src="{{comic.imagen}}" style="width: 100px; height: 130px;"/>
-    <button style="background-color: green;" (click)="marcarFavorito()">
+    <button class="btn btn-info" (click)="marcarFavorito()">
         Favorito
     </button>
-    <button style="background-color: red;" (click)="deleteComic()">
+    <button class="btn btn-danger" (click)="deleteComic()">
         Delete
     </button>
-    <button style="background-color: blue;" (click)="updateComic()">
+    <button class="btn btn-primary" (click)="updateComic()">
         Update
     </button>
 </div>

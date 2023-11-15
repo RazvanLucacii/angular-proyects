@@ -1,13 +1,13 @@
-<div>
+<div class="container">
     <h1 style="color:blue">Librería Comics Servicios</h1>
     <form #comicForm="ngForm">
-        <label>Nombre: </label>
-        <input type="text" name="cajanombre" #cajanombre/><br/>
-        <label>Descripción</label>
-        <input type="text" name="cajadescripcion" #cajadescripcion/><br/>
-        <label>Imagen</label>
-        <input type="text" name="cajaimagen" #cajaimagen/><br/>
-        <button (click)="insertarComic()">
+        <label class="form-label">Nombre: </label>
+        <input type="text" class="form-control" name="cajanombre" #cajanombre/><br/>
+        <label class="form-label">Descripción</label>
+        <input type="text" class="form-control" name="cajadescripcion" #cajadescripcion/><br/>
+        <label class="form-label">Imagen</label>
+        <input type="text" class="form-control" name="cajaimagen" #cajaimagen/><br/>
+        <button class="btn btn-success" (click)="insertarComic()">
             Insertar Comic
         </button>
     </form>

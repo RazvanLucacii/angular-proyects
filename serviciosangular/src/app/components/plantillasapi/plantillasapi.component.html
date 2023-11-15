@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Plantilla Api Angular</h1>
+    <select class="form-select" (change)="mostrarEmpleados()" name="cajaempleados" #cajaempleados>
+        <option [value]="funcion" *ngFor="let funcion of funciones">
+            {{funcion}}
+        </option>
+    </select>
+    <hr/>
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>ID Empleado</th>
+                <th>ID Hospital</th>
+                <th>ID Sala</th>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Turno</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empleado of empleados">
+                <td>{{empleado.idEmpleado}}</td>
+                <td>{{empleado.idHospital}}</td>
+                <td>{{empleado.idSala}}</td>
+                <td>{{empleado.apellido}}</td>
+                <td>{{empleado.funcion}}</td>
+                <td>{{empleado.turno}}</td>
+                <td>{{empleado.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

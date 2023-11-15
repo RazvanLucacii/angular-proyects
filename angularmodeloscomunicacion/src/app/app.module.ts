@@ -11,6 +11,7 @@ import { HijococheComponent } from './components/hijocoche/hijocoche.component';
 import { PadrecochesComponent } from './components/padrecoches/padrecoches.component';
 import { PadredeportesComponent } from './components/padredeportes/padredeportes.component';
 import { HijodeporteComponent } from './components/hijodeporte/hijodeporte.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HijodeporteComponent } from './components/hijodeporte/hijodeporte.compo
     HijodeporteComponent
   ],
   imports: [
-    BrowserModule, routing
+    BrowserModule, routing, NgbModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
