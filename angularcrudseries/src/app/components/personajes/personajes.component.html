@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <button class="btn btn-outline-dark" [routerLink]="['/']">Volver</button>
+    <br/><br/>
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>Personaje</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let personaje of personajes">
+                <td>{{personaje.nombre}}</td>
+                <td><img src="{{personaje.imagen}}" style="width: 200px;" alt="imagen"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

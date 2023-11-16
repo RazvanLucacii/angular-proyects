@@ -12,6 +12,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ModificarpersonajesComponent } from './components/modificarpersonajes/modificarpersonajes.component';
 import { InsertarpersonajeComponent } from './components/insertarpersonaje/insertarpersonaje.component';
 import { SeriesComponent } from './components/series/series.component';
+import { PersonajesComponent } from './components/personajes/personajes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SeriesComponent } from './components/series/series.component';
     MenuComponent,
     ModificarpersonajesComponent,
     InsertarpersonajeComponent,
-    SeriesComponent
+    SeriesComponent,
+    PersonajesComponent
   ],
   imports: [
     BrowserModule, routing, HttpClientModule, FormsModule

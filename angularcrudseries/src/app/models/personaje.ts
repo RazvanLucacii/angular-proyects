@@ -3,6 +3,6 @@ export class Personaje {
         public idPersonaje: number,
         public nombre: string,
         public imagen: string,
-        public idserie: number,
+        public idSerie: number,
     ){}
 }

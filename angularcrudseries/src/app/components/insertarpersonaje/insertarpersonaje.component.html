@@ -1,1 +1,19 @@
-<p>insertarpersonaje works!</p>
+<div class="container">
+    <h1>Nuevo Personaje</h1>
+    <form #insertForm="ngForm">
+        <label class="form-label">Id Personaje: </label>
+        <input type="number" #cajaidperso name="cajaidperso" class="form-control">
+        <label class="form-label">Nombre: </label>
+        <input type="text" #cajanombre name="cajanombre" class="form-control">
+        <label class="form-label">Imagen: </label>
+        <input type="text" #cajaimagen name="cajaimagen" class="form-control">
+        <label class="form-label">Serie: </label>
+        <select class="form-control" #cajaidserie name="cajaidserie">
+            <option value="{{serie.idSerie}}" *ngFor="let serie of series">
+                {{serie.nombre}}
+            </option>
+        </select>
+        <br/>
+        <button class="btn btn-success" (click)="insertarPersonaje()">Insertar Personaje</button>
+    </form>
+</div>
