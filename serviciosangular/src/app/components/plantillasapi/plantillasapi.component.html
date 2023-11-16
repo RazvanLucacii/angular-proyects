@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Plantilla Api Angular</h1>
-    <select class="form-select" (change)="mostrarEmpleados()" name="cajaempleados" #cajaempleados>
+    <select class="form-select" (change)="mostrarEmpleados()" name="cajaempleados" #cajaempleados multiple>
         <option [value]="funcion" *ngFor="let funcion of funciones">
             {{funcion}}
         </option>

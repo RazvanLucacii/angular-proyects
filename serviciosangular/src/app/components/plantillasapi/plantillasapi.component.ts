@@ -20,11 +20,17 @@ export class PlantillasapiComponent {
     })
   }
   mostrarEmpleados() {
-    console.log(this.cajaEmpleadosRef.nativeElement)
-    var funcion = this.cajaEmpleadosRef.nativeElement.value;
-    this._serviceplantillas.getFuncionPromesa(funcion).then(response =>{
-      this.empleados = response;
-      console.log(this.empleados);
-    })
+    this.empleados = [];
+    var options = [...this.cajaEmpleadosRef.nativeElement.selectedOptions];
+    options.forEach(option => {
+      var funcion = option.value;    
+      this._serviceplantillas.getFuncionPromesa(funcion).then((response : Array<Empleados>) =>{        
+        // response.forEach(empleado => {
+        //   this.empleados.push(empleado);
+        // });
+        this.empleados.push(...response);
+        
+      })
+    });
   }
 }
