@@ -4,10 +4,11 @@ import { Router } from '@angular/router';
 import { Empleado } from 'src/app/models/empleados';
 import { Login } from 'src/app/models/login';
 import { ServiceLogin } from 'src/app/services/service.empleados';
+import { EmpleadoService } from 'src/app/services/service.subordinado';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
+  templateUrl: './login.component.html', 
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
@@ -28,6 +29,7 @@ export class LoginComponent {
     this._serviceLogin.getLogin(login).subscribe(response =>{
       var token = response.response;
       console.log(token);
+      this._serviceLogin.setToken(response.access_token);
       this._serviceLogin.getEmpleados(token).subscribe(response =>{
         this.empleados = response;
       })

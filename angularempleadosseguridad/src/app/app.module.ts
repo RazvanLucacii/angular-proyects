@@ -10,18 +10,24 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ServiceLogin } from './services/service.empleados';
 import { MenuComponent } from './components/menu/menu.component';
+import { SubordinadosComponent } from './components/subordinados/subordinados.component';
+import { PerfilempleadoComponent } from './components/perfilempleado/perfilempleado.component';
+import { AuthDataService } from './services/service.auth-data';
+import { EmpleadoService } from './services/service.subordinado';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    SubordinadosComponent,
+    PerfilempleadoComponent
   ],
   imports: [
     BrowserModule, routing, HttpClientModule, FormsModule
   ],
-  providers: [appRoutingProvider, ServiceLogin],
+  providers: [appRoutingProvider, ServiceLogin, AuthDataService, EmpleadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
