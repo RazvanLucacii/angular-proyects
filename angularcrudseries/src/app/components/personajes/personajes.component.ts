@@ -20,8 +20,13 @@ export class PersonajesComponent {
   ){}
 
   ngOnInit(): void {
-    this._servicePersonaje.getPersonajes().subscribe(response => {
-      this.personajes = response;
+    
+    this._activeRoute.params.subscribe((parametros) =>{      
+      var id : string= parametros['id'];
+      this._servicePersonaje.getPersonajes(id).subscribe(response => {
+        console.log(response);
+        this.personajes = response;
+      })
     })
   }
 }

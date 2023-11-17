@@ -1,1 +1,16 @@
-<p>modificarpersonajes works!</p>
+<div class="container">
+    <select class="form-control" #cajaidserie name="cajaidserie">
+        <option value="{{serie.idSerie}}" *ngFor="let serie of series">
+            {{serie.nombre}}
+        </option>
+    </select>
+    <br/>
+    <select class="form-control" #cajaidpj name="cajaidpj">
+        <option value="{{personaje.idSerie}}" *ngFor="let personaje of personajes">
+            {{personaje.nombre}}
+        </option>
+    </select>
+    <button class="btn btn-success" >
+        Guardar Cambios
+    </button>
+</div>

@@ -35,7 +35,7 @@ export class InsertarpersonajeComponent {
     var newPers = new Personaje(idP ,nom, img, idS);
     this._serviceSeries.create(newPers).subscribe(response =>{
       console.log(response)
-      this._router.navigate(["/,"]);
+      this._router.navigate(["/"]);
     })
   }
 }

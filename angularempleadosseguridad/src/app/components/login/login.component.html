@@ -1,0 +1,24 @@
+<div class="container">
+    <form #loginForm="ngForm">
+        <label class="form-control">Usuario: </label>
+        <input type="text" #cajausuario name="cajausuario" class="form-label" />
+        <label class="form-control">Contraseña: </label>
+        <input type="password" #cajapassword name="cajapassword" class="form-label" />
+        <br/>
+        <button class="btn btn-primary" (click)="iniciarUsuario()">
+            Loguearte
+        </button>
+    </form>
+
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>

@@ -15,8 +15,8 @@ export class ServiceSeries {
         return this._http.get(url);
     }
 
-    getPersonajes(): Observable<any> {
-        var request = "api/personajes";
+    getPersonajes(id: string): Observable<any> {
+        var request = "api/series/personajesserie/" + id;
         var url = environment.apiUrlSeries + request;
         return this._http.get(url);
     }
