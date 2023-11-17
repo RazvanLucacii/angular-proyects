@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Serie } from "../models/serie";
 import { Personaje } from "../models/personaje";
+import { Serie } from "../models/serie";
 
 @Injectable()
 export class ServiceSeries {
@@ -15,7 +15,13 @@ export class ServiceSeries {
         return this._http.get(url);
     }
 
-    getPersonajes(id: string): Observable<any> {
+    getPersonajes(): Observable<any> {
+        var request = "api/personajes";
+        var url = environment.apiUrlSeries + request;
+        return this._http.get(url);
+    }
+
+    getPersonajesSeries(id: string): Observable<any> {
         var request = "api/series/personajesserie/" + id;
         var url = environment.apiUrlSeries + request;
         return this._http.get(url);
@@ -34,5 +40,11 @@ export class ServiceSeries {
         var request = "api/personajes";
         var url = environment.apiUrlSeries + request;
         return this._http.post(url, json,{headers: header});
+    }
+
+    update(personaje: number, serie: number): Observable<any>{
+        var request = "api/personajes/" + personaje + "/" + serie;
+        var url = environment.apiUrlSeries + request;
+        return this._http.put(url, {});
     }
 }

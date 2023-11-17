@@ -23,7 +23,7 @@ export class PersonajesComponent {
     
     this._activeRoute.params.subscribe((parametros) =>{      
       var id : string= parametros['id'];
-      this._servicePersonaje.getPersonajes(id).subscribe(response => {
+      this._servicePersonaje.getPersonajesSeries(id).subscribe(response => {
         console.log(response);
         this.personajes = response;
       })

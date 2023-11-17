@@ -1,16 +1,21 @@
 <div class="container">
+    <h1>Personajes y Series</h1>
+    <br/>
+    <label class="form-label">Series: </label>
     <select class="form-control" #cajaidserie name="cajaidserie">
         <option value="{{serie.idSerie}}" *ngFor="let serie of series">
             {{serie.nombre}}
         </option>
     </select>
     <br/>
+    <label class="form-label">Personajes: </label>
     <select class="form-control" #cajaidpj name="cajaidpj">
         <option value="{{personaje.idSerie}}" *ngFor="let personaje of personajes">
             {{personaje.nombre}}
         </option>
     </select>
-    <button class="btn btn-success" >
+    <br/>
+    <button class="btn btn-success" (click)="modificarSeries()">
         Guardar Cambios
     </button>
 </div>
