@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Nuevo Alumno</h1>
+    <form #insertForm="ngForm">
+        <label>Id Alumno</label>
+        <input type="number" #cajaid name="cajaid" class="form-control">
+        <label>Nombre</label>
+        <input type="text" #cajanombre name="cajanombre" class="form-control">
+        <label>Apellidos</label>
+        <input type="text" #cajaapellidos name="cajaapellidos" class="form-control">
+        <label>Imagen</label>
+        <input type="text" #cajaimagen name="cajaimagen" class="form-control">
+        <label>Activo</label>
+        <input type="number" #cajaactivo name="cajaactivo" class="form-control">
+        <label>Id Curso</label>
+        <input type="number" #cajaidcurso name="cajaidcurso" class="form-control">
+        <button class="btn btn-success" (click)="insertarAlumno()">Insertar Alumno</button>
+    </form>
+</div>

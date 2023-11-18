@@ -29,7 +29,6 @@ export class LoginComponent {
     this._serviceLogin.getLogin(login).subscribe(response =>{
       var token = response.response;
       console.log(token);
-      this._serviceLogin.setToken(response.access_token);
       this._serviceLogin.getEmpleados(token).subscribe(response =>{
         this.empleados = response;
       })

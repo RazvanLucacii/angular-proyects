@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Login Angular</h1>
+    <form #ngalumnos="ngForm">
+        <label class="form-control">Usuario</label>
+        <input type="text" #cajausuario name="cajausuario" class="form-control" />
+        <label class="form-control">Password</label>
+        <input type="password" #cajapassword name="cajapassword" class="form-control" />
+        <button class="btn btn-success" (click)="login()">Login</button>
+    </form>
+</div>
