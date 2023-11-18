@@ -6,7 +6,10 @@ import { Departamento } from 'src/app/models/departamento';
 
 @Injectable()
 export class ServiceDepartamentos {
-    constructor(private _http: HttpClient){}
+
+    constructor(
+        private _http: HttpClient
+    ){}
 
     getDepartamentos(): Observable<any> {
         var request = "api/departamentos";

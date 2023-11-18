@@ -1,0 +1,25 @@
+<div class="container">
+    <form #editForm="ngForm" name="cajaform" #cajaform *ngFor="let alumno of alumnos">
+        <label class="form-label">Id Alumno</label>
+        <input type="number" #cajaid name="cajaid" class="form-control"
+            value="{{alumno.idAlumno}}">
+        <label class="form-label">Nombre</label>
+        <input type="text" name="cajanombre" #cajanombre class="form-control"
+            value="{{alumno.nombre}}">
+        <label class="form-label">Apellidos</label>
+        <input type="text" name="cajaapellidos" #cajaapellidos class="form-control"
+            value="{{alumno.apellidos}}">
+        <label class="form-label">Imagen</label>
+        <input type="text" name="cajaimagen" #cajaimagen class="form-control"
+            value="{{alumno.imagen}}">
+        <label class="form-label">Activo</label>
+        <input type="number" name="cajaactivo" #cajaactivo class="form-control"
+            value="{{alumno.activo}}">
+        <label class="form-label">ID Curso</label>
+        <input type="number" name="cajaidcurso" #cajaidcurso class="form-control"
+            value="{{alumno.idCurso}}">
+        <button (click)="updateAlumno()" class="btn btn-outline-dark">
+            Editar
+        </button>
+    </form>
+</div>

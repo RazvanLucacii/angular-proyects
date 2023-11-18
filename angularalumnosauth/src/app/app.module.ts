@@ -13,6 +13,7 @@ import { ServiceLogin } from './services/service.login';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { ServiceAlumnos } from './services/service.alumnos';
 import { InsertaralumnoComponent } from './components/insertaralumno/insertaralumno.component';
+import { EditaralumnoComponent } from './components/editaralumno/editaralumno.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InsertaralumnoComponent } from './components/insertaralumno/insertaralu
     MenuComponent,
     LoginComponent,
     AlumnosComponent,
-    InsertaralumnoComponent
+    InsertaralumnoComponent,
+    EditaralumnoComponent
   ],
   imports: [
     BrowserModule, routing, HttpClientModule, FormsModule,

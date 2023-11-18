@@ -4,6 +4,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login.component";
 import { AlumnosComponent } from "./components/alumnos/alumnos.component";
 import { InsertaralumnoComponent } from "./components/insertaralumno/insertaralumno.component";
+import { EditaralumnoComponent } from "./components/editaralumno/editaralumno.component";
 
 
 const appRoutes : Routes = [
@@ -18,6 +19,9 @@ const appRoutes : Routes = [
     },
     {
         path: "insertar", component: InsertaralumnoComponent
+    },
+    { 
+        path: "alumnos/edit", component: EditaralumnoComponent
     },
     
 ]
